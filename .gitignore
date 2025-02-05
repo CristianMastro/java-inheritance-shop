@@ -1,0 +1,6 @@
+.vscode/settings.json
+bin/negozio/Cuffie.class
+bin/negozio/Negozio.class
+bin/negozio/Prodotto.class
+bin/negozio/SmartPhone.class
+bin/negozio/Televisori.class
