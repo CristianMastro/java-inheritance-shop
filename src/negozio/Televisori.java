@@ -26,7 +26,7 @@ public class Televisori extends Prodotto {
     }
 
     //set se il televisore è smart//
-    public void setSmart(boolean smart) {
+    public void isSmart(boolean smart) {
         this.smart = smart;
     }
 

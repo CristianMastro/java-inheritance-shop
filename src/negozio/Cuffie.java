@@ -26,7 +26,7 @@ public class Cuffie extends Prodotto {
     }
 
     //setta il metodo di collegamento
-    public void setConnection(boolean connection) {
+    public void isConnection(boolean connection) {
         this.connection = connection;
     }
 

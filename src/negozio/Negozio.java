@@ -20,7 +20,7 @@ public class Negozio {
     public static void main(String[] args) {
        
         SmartPhone telefono1 = new SmartPhone();
-
+        
         telefono1.calcolaCodice();
         telefono1.setBrand("Nokia");
         telefono1.setName("3310");
@@ -43,7 +43,7 @@ public class Negozio {
         tv1.setName("Oled");
         tv1.setPrice(799);
         tv1.setDimension(65);
-        tv1.setSmart(true);
+        tv1.isSmart(true);
         tv1.setIva(tv1.getPrice());
 
         System.out.println(tv1.getCode());
@@ -60,7 +60,7 @@ public class Negozio {
         cuffia1.setName("Audio 3d");
         cuffia1.setPrice(49);
         cuffia1.setColor("Black");
-        cuffia1.setConnection(false);
+        cuffia1.isConnection(false);
         cuffia1.setIva(tv1.getPrice());
        
         System.out.println(cuffia1.getCode());
