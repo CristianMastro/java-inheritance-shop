@@ -1,8 +1,10 @@
 package negozio;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Prodotto {
     
+    Scanner scanner = new Scanner(System.in);
 
     private int code;
     private String name;
@@ -10,8 +12,26 @@ public class Prodotto {
     private double price;
     private double iva;
 
+    public Prodotto (Scanner scanner) {
+        calcolaCodice();
+        System.out.println("Inserisci nome prodotto");
+        this.name = scanner.nextLine();
+        System.out.println("Inserisci la marca");
+        this.brand = scanner.nextLine();
+        System.out.println("Inserisci il prezzo senza IVA");
+        this.price = scanner.nextInt();
+        setIva(this.price);
+    }
+ 
 
-    
+    @Override
+    public String toString() {
+        return "Codice prodotto: " + code + ", " 
+                + "Nome prodotto: " + name + ", " 
+                + "Marca : " + brand + ", "
+                + "Prezzo senza iva: " + price 
+                + "Prezzo finale" + iva + ", ";
+    }
 
     //metodo per dare un codice random//
     public void calcolaCodice(){

@@ -1,9 +1,26 @@
 package negozio;
 
+import java.util.Scanner;
+
 public class Cuffie extends Prodotto {
-    
+
     private String color;
     private boolean connection;
+
+    public Cuffie(Scanner scanner) {
+        super(scanner);
+        System.out.println("Inserisci il colore");
+        this.color = scanner.nextLine();
+        System.out.println("E' wireless? (true/false) ");
+        this.connection = Boolean.parseBoolean(scanner.nextLine());
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ","
+        + "Colore: " + color + ","
+        + getConnection();
+    }    
 
     //ritorna il colore//
     public String getColor() {

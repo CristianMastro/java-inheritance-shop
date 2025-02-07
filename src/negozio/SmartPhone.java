@@ -1,9 +1,31 @@
 package negozio;
 
-public class SmartPhone extends Prodotto {
+import java.util.Scanner;
 
+public class SmartPhone extends Prodotto {
+    
     private String imeiCode;
     private int memory;
+
+    public SmartPhone(Scanner scanner) {
+        super(scanner);
+        scanner.nextLine();
+        System.out.println("Inserisci il codice IMEI");
+        this.imeiCode = scanner.nextLine();
+        System.out.println("Inserisci quanta memoria ha il telefono");
+        this.memory = scanner.nextInt();
+    }
+
+    
+
+    @Override
+    public String toString() {
+        return super.toString() + ", " 
+        + "Codice IMEI: " + imeiCode + ", "
+        + "Memoria telefono: " + memory + "GB";
+    }
+
+
 
     //ritorna il codice imei//
     public String getImeiCode() {

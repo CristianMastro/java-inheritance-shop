@@ -1,10 +1,27 @@
 package negozio;
 
+import java.util.Scanner;
+
 public class Televisori extends Prodotto {
-    
+
     private double dimension;
     private boolean smart;
+    
+    public Televisori(Scanner scanner) {
+        super(scanner);
+        System.out.println("Inserisci le dimensioni");
+        this.dimension = scanner.nextInt();
+        System.out.println("E' smart? (true/false)");
+        this.smart = Boolean.parseBoolean(scanner.nextLine());    
+    }
 
+    @Override
+    public String toString() {
+        return super.toString() + "," 
+        + "Dimensione: " + dimension + ","
+        + getSmart();
+    } 
+        
     //ritorna dimensioni//
     public double getDimension() {
         return dimension;
