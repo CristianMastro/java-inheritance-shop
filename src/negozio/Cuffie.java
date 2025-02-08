@@ -11,15 +11,16 @@ public class Cuffie extends Prodotto {
         super(scanner);
         System.out.println("Inserisci il colore");
         this.color = scanner.nextLine();
+        scanner.nextLine();
         System.out.println("E' wireless? (true/false) ");
         this.connection = Boolean.parseBoolean(scanner.nextLine());
     }
 
     @Override
     public String toString() {
-        return super.toString() + ","
+        return super.toString()
         + "Colore: " + color + ","
-        + getConnection();
+        + "Le cuffie sono wirless: " + connection;
     }    
 
     //ritorna il colore//

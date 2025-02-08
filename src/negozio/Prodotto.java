@@ -29,8 +29,8 @@ public class Prodotto {
         return "Codice prodotto: " + code + ", " 
                 + "Nome prodotto: " + name + ", " 
                 + "Marca : " + brand + ", "
-                + "Prezzo senza iva: " + price 
-                + "Prezzo finale" + iva + ", ";
+                + "Prezzo senza iva: " + price + ", "
+                + "Prezzo finale: " + iva + ", ";
     }
 
     //metodo per dare un codice random//

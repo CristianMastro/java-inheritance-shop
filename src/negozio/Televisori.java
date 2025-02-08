@@ -11,15 +11,16 @@ public class Televisori extends Prodotto {
         super(scanner);
         System.out.println("Inserisci le dimensioni");
         this.dimension = scanner.nextInt();
+        scanner.nextLine();
         System.out.println("E' smart? (true/false)");
         this.smart = Boolean.parseBoolean(scanner.nextLine());    
     }
 
     @Override
     public String toString() {
-        return super.toString() + "," 
+        return super.toString()
         + "Dimensione: " + dimension + ","
-        + getSmart();
+        + "La tv è smart: " + smart;
     } 
         
     //ritorna dimensioni//

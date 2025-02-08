@@ -16,10 +16,21 @@ Cuffie, caratterizzate dal colore e se sono wireless o cablate
 Utilizzate l’ereditarietà per riutilizzare il codice di Prodotto nella stesura delle classi che gestiscono i vari sotto tipi di prodotto.
  */
 
+import java.util.Scanner;
+
 public class Negozio {
     public static void main(String[] args) {
        
+        Scanner scanner = new Scanner(System.in);
 
+        SmartPhone smartPhone1 = new SmartPhone(scanner);
+        System.out.println(smartPhone1.toString());
+
+        Televisori televisore1 = new Televisori(scanner);
+        System.out.println(televisore1.toString());
+
+        Cuffie cuffie1 = new Cuffie(scanner);
+        System.out.println(cuffie1.toString());
 
     }
 }

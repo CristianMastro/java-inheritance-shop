@@ -14,13 +14,14 @@ public class SmartPhone extends Prodotto {
         this.imeiCode = scanner.nextLine();
         System.out.println("Inserisci quanta memoria ha il telefono");
         this.memory = scanner.nextInt();
+        scanner.nextLine();
     }
 
     
 
     @Override
     public String toString() {
-        return super.toString() + ", " 
+        return super.toString() 
         + "Codice IMEI: " + imeiCode + ", "
         + "Memoria telefono: " + memory + "GB";
     }

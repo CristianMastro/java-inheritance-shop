@@ -8,20 +8,47 @@ public class Carrello {
 
         
         Scanner scanner = new Scanner(System.in);
+        Prodotto[] carrello = new Prodotto [100];
+        int prodottoInserito = 0;
+        boolean continua = true; 
 
-        System.out.println("Aggiungi un prodotto al carrello, cosa vuoi aggiongere? (Smartphone, Televisori, Cuffie)");
-        String scelta = scanner.nextLine().trim().toLowerCase();
+        while (continua) {
+            System.out.println("Quale prodotto vuoi aggiungere? (Smartphone, Televisori, Cuffie)");
+            String scelta = scanner.nextLine().trim().toLowerCase();
 
-        if (scelta.equals("smartphone")) {
-            
-            SmartPhone smartPhone1 = new SmartPhone(scanner);
+            Prodotto prodotto = null;
 
-            System.out.println(smartPhone1.toString());
-            
-            
+            if (scelta.equals("smartphone")) {
+                prodotto = new SmartPhone(scanner);
+            } else if (scelta.equals("televisori")) {
+                prodotto = new Televisori(scanner);
+            } else if (scelta.equals("cuffie")) {
+                prodotto = new Cuffie(scanner);
+            } else {
+                System.out.println("Il prodotto inserito non è valido, riprova.");
+                continue;
+            }
 
-            
+            carrello[prodottoInserito] = prodotto; 
+            prodottoInserito++; 
+            System.out.println("Prodotto inserito nel carrello");
+            System.out.println("Vuoi inserire un altro prodotto? (si/no)");
+            String nuovaScelta = scanner.nextLine().trim().toLowerCase();
+
+            if (nuovaScelta.equals("no")) {
+                System.out.println("Vai in cassa");
+                continua = false;
+            }
         }
-    }
-    
+
+        System.out.println("Prodotti presenti nel carrello");
+        if (prodottoInserito == 0) {
+            System.out.println("Il carrello è vuoto.");
+        } else {
+            for (int i = 0; i < prodottoInserito; i++) {
+                System.out.println(carrello[i].toString());
+            }
+        }
+    }        
 }
+
