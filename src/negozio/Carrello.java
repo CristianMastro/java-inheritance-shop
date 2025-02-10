@@ -8,11 +8,12 @@ public class Carrello {
 
         
         Scanner scanner = new Scanner(System.in);
-        Prodotto[] carrello = new Prodotto [100];
+        Prodotto[] carrello = new Prodotto [10];
         int prodottoInserito = 0;
         boolean continua = true; 
 
         while (continua) {
+
             System.out.println("Quale prodotto vuoi aggiungere? (Smartphone, Televisori, Cuffie)");
             String scelta = scanner.nextLine().trim().toLowerCase();
 
@@ -32,6 +33,12 @@ public class Carrello {
             carrello[prodottoInserito] = prodotto; 
             prodottoInserito++; 
             System.out.println("Prodotto inserito nel carrello");
+
+            if (prodottoInserito >= carrello.length) {
+                System.out.println("Il carrello è pieno! Vai in cassa.");
+                break;
+            }
+
             System.out.println("Vuoi inserire un altro prodotto? (si/no)");
             String nuovaScelta = scanner.nextLine().trim().toLowerCase();
 
